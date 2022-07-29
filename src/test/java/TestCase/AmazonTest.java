@@ -33,5 +33,10 @@ public class AmazonTest {
 		System.out.println(pp.kettleTxt.getText());
 	}
 	
+	@Test
+	public void addToCart() {
+		
+	}
+	
 
 }
