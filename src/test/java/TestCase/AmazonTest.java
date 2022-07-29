@@ -24,11 +24,13 @@ public class AmazonTest {
 	}
 	
 	@Test
-	public void SearchBentoBox() {
+	public void SearchItem() {
 		hp.searchBox.sendKeys(Configuration.getProperty("item"));
 		hp.searchBox.sendKeys(Keys.RETURN);
 		pp.verifyUrl();
+		System.out.println(Driver.getDriver().getCurrentUrl().toString());
 		pp.verifyKettle();
+		System.out.println(pp.kettleTxt.getText());
 	}
 	
 

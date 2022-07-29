@@ -64,7 +64,7 @@
 		</dependency>
 
     
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -99,8 +99,34 @@
             <version>${rest.assured.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+    		<groupId>io.rest-assured</groupId>
+   			 <artifactId>rest-assured</artifactId>
+    		<version>5.1.1</version>
+		</dependency> -->
     </dependencies>
+    
     <build>
+    <plugins>
+        
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+
+                    <suiteXmlFiles>
+                        <suiteXmlFile>Regression.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+
+                </configuration>
+            </plugin>
+            
+           
+
+    </plugins>
+</build>
+    <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -114,6 +140,6 @@
                 </dependencies>
             </plugin>
         </plugins>
-    </build>
+    </build> -->
 
 </project>
